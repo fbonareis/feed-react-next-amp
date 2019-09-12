@@ -28,5 +28,6 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'react/destructuring-assignment': 'off',
     'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
   },
 };
