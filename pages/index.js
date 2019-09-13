@@ -21,8 +21,10 @@ export default class Home extends Component {
         <Container>
           {this.props.feed.map(item => (
             <article key={item.id}>
-              <Link href="/post">
-                <h1>{item.title}</h1>
+              <Link href="/post/[pid]" as={`/post/${item.id}`}>
+                <a>
+                  <h1>{item.title}</h1>
+                </a>
               </Link>
               <p>{item.body}</p>
             </article>
@@ -40,5 +42,16 @@ const Container = styled.div`
   article {
     padding: 15px;
     border-bottom: 1px solid #ccc;
+
+    a {
+      text-decoration: none;
+      color: black;
+      transition: 300ms all;
+
+      &:hover {
+        opacity: 0.7;
+        display: block;
+      }
+    }
   }
 `;
