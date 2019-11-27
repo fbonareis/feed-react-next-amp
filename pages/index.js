@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 export default class Home extends Component {
   static getInitialProps = async () => {
-    const response = await fetch('http://www.somaku.com/posts');
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
 
     return { feed: await response.json() };
   };
